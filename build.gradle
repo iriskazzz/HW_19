@@ -1,0 +1,32 @@
+plugins {
+    id 'java-library'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation(
+            'com.codeborne:selenide:6.19.1',
+            'org.junit.jupiter:junit-jupiter:5.10.0',
+            'org.slf4j:slf4j-simple:2.0.7',
+            'org.aeonbits.owner:owner:1.0.12'
+    )
+
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
+}
+
+tasks.withType(Test) {
+    testLogging {
+        events "passed", "skipped", "failed", "standardOut", "standardError"
+        exceptionFormat "full"
+    }
+
+    useJUnitPlatform()
+    systemProperties(System.getProperties())
+}
+
+test {
+    useJUnitPlatform()
+}
