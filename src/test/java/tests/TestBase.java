@@ -14,7 +14,6 @@ public class TestBase {
     Configuration.browser = webConfig.getBrowserName();
     Configuration.browserVersion = webConfig.getBrowserVersion();
     Configuration.remote = webConfig.getRemoteUrl();
-    Configuration.pageLoadStrategy = "eager";
   }
 
 }
