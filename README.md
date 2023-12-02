@@ -5,7 +5,7 @@
 gradle test -Denv=local
 ```
 
-Для запуска тестов на Selenoid:
+Для запуска тестов удаленно:
 ```shell
 gradle test -Denv=remote
 ```
