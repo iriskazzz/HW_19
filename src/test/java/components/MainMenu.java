@@ -1,4 +1,4 @@
-package pages;
+package components;
 
 import com.codeborne.selenide.Condition;
 
@@ -6,19 +6,19 @@ import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class MainPage {
+public class MainMenu {
 
-  public MainPage openPage() {
+  public MainMenu openPage() {
     open(baseUrl);
     return this;
   }
 
-  public MainPage clickByText(String value) {
+  public MainMenu clickByText(String value) {
     $(byText(value)).click();
     return this;
   }
 
-  public MainPage checkVisibleElement(String value) {
+  public MainMenu checkVisibleElement(String value) {
     $(byText(value)).shouldBe(Condition.visible);
     return this;
   }

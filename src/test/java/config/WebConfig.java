@@ -19,4 +19,8 @@ public interface WebConfig extends Config{
   @Key("remoteUrl")
   String getRemoteUrl();
 
+  @Key("baseUrl")
+  @DefaultValue("https://www.bork.ru/")
+  String getBaseUrl();
+
 }

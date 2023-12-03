@@ -10,10 +10,11 @@ public class TestBase {
   @BeforeAll
   static void beforeAll() {
     WebConfig webConfig = ConfigFactory.create(WebConfig.class, System.getProperties());
-    Configuration.baseUrl = "https://www.bork.ru/";
+    Configuration.baseUrl = webConfig.getBaseUrl();
     Configuration.browser = webConfig.getBrowserName();
     Configuration.browserVersion = webConfig.getBrowserVersion();
     Configuration.remote = webConfig.getRemoteUrl();
+    Configuration.pageLoadStrategy = "eager";
   }
 
 }

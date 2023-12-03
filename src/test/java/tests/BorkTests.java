@@ -1,14 +1,14 @@
 package tests;
 
 import org.junit.jupiter.api.Test;
-import pages.MainPage;
+import components.MainMenu;
 
 public class BorkTests extends TestBase{
-  MainPage mainPage = new MainPage();
+  MainMenu mainMenu = new MainMenu();
 
   @Test
-  void CheckLang() {
-    mainPage.openPage()
+  void checkLang() {
+    mainMenu.openPage()
             .clickByText("Личный кабинет")
             .clickByText("Eng")
             .checkVisibleElement("Cleanliness and climate");
